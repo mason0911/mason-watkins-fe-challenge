@@ -8,6 +8,8 @@ import styles from './productList.module.scss'
 
 interface ProductListProps {
   products: ProductType[]
+  lowerCaseFilters: string[]
+  isFiltering: boolean
   meta: {
     hasMore: boolean
     limit: number
@@ -19,13 +21,27 @@ interface ProductListProps {
   onLoadMore: () => void
 }
 
-const ProductList = ({ products, meta, onLoadMore }: ProductListProps) => {
+const ProductList = ({
+  products,
+  meta,
+  onLoadMore,
+  isFiltering,
+  lowerCaseFilters,
+}: ProductListProps) => {
   const [productList, setProductList] = useState<ProductType[]>([])
 
   useEffect(() => {
-    setProductList((prevProducts) =>
-      _.uniqBy([...prevProducts, ...products], (e) => e.id)
-    )
+    setProductList((prevProducts) => {
+      const newProducts = _.uniqBy([...prevProducts, ...products], (e) => e.id)
+
+      return isFiltering
+        ? newProducts?.filter((product: ProductType) =>
+            product.categories?.some((category) =>
+              lowerCaseFilters.includes(category.name?.toLowerCase())
+            )
+          )
+        : newProducts
+    })
   }, [products])
 
   return (

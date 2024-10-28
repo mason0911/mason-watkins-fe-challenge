@@ -24,53 +24,47 @@
       #fff;
     overflow: hidden;
 
-    .commission1 {
+    %commission {
       position: absolute;
       top: 10px;
       left: 10px;
-      display: flex;
-      width: 101.486px;
-      height: 16.262px;
       padding: 2px 7px;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      flex-shrink: 0;
-      border-radius: 4px;
-      border: 1px solid #fff;
-      background: #000;
       overflow: hidden;
-      color: #fff;
       text-align: center;
       text-overflow: ellipsis;
       font-family: Montserrat;
-      font-size: 8px;
       font-style: normal;
-      font-weight: 700;
       line-height: 16px;
       text-transform: uppercase;
     }
 
+    .commission1 {
+      @extend %commission;
+
+      display: flex;
+      width: 101.486px;
+      height: 16.262px;
+      flex-shrink: 0;
+      border: 1px solid #fff;
+      background: #000;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+    }
+
     .commission2 {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+      @extend %commission;
+
       display: inline-flex;
-      padding: 2px 7px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
       border: 1px solid #000;
       background: #fff;
-      overflow: hidden;
       color: #000;
-      text-align: center;
-      text-overflow: ellipsis;
-      font-family: Montserrat;
       font-size: 9px;
-      font-style: normal;
       font-weight: 500;
-      line-height: 16px;
     }
 
     .like {

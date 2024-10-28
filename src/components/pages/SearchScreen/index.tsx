@@ -6,7 +6,6 @@ import SellerCarousel from '@/components/Carousel/SellerCarousel'
 import BrandCarousel from '@/components/Carousel/BrandCarousel'
 import ProductList from '@/components/ProductList'
 import Filters from '@/components/Filters'
-import { ProductType } from '@/types'
 import { DoubleArrowIcon } from '@/styles/icons'
 import styles from './searchScreen.module.scss'
 
@@ -33,15 +32,6 @@ const SearchContent = ({
   const searchParams = useSearchParams()
 
   const lowerCaseFilters = selectedFilters.map((filter) => filter.toLowerCase())
-
-  const products =
-    selectedFilters.length > 0
-      ? data?.products?.filter((product: ProductType) =>
-          product.categories?.some((category) =>
-            lowerCaseFilters.includes(category.name?.toLowerCase())
-          )
-        )
-      : data?.products
 
   const filters = data?.facets?.categories
     ? data.facets.categories.map((cat: { name: string }) => cat.name)
@@ -80,9 +70,11 @@ const SearchContent = ({
             )}
           />
           <ProductList
-            products={products}
+            products={data?.products}
             meta={data?.meta}
             onLoadMore={onLoadMore}
+            lowerCaseFilters={lowerCaseFilters}
+            isFiltering={selectedFilters.length > 0}
           />
         </div>
       </div>
