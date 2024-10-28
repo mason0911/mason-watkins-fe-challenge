@@ -10,6 +10,7 @@ interface ProductListProps {
   products: ProductType[]
   lowerCaseFilters: string[]
   isFiltering: boolean
+  isNew: boolean
   meta: {
     hasMore: boolean
     limit: number
@@ -26,11 +27,16 @@ const ProductList = ({
   meta,
   onLoadMore,
   isFiltering,
+  isNew,
   lowerCaseFilters,
 }: ProductListProps) => {
   const [productList, setProductList] = useState<ProductType[]>([])
 
   useEffect(() => {
+    if (isNew) {
+      return setProductList(products)
+    }
+
     setProductList((prevProducts) => {
       const newProducts = _.uniqBy([...prevProducts, ...products], (e) => e.id)
 
@@ -42,7 +48,7 @@ const ProductList = ({
           )
         : newProducts
     })
-  }, [products])
+  }, [products, isNew])
 
   return (
     <div className={styles.container}>

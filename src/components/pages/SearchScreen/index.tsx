@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useParams, useRouter, useSearchParams } from 'next/navigation'
 import SellerCarousel from '@/components/Carousel/SellerCarousel'
 import BrandCarousel from '@/components/Carousel/BrandCarousel'
@@ -19,6 +19,7 @@ interface SearchContentProps {
   data: any
   selectedFilters: string[]
   query?: string
+  isNew: boolean
   onFilterSelect: (filter: string) => void
 }
 
@@ -26,6 +27,7 @@ const SearchContent = ({
   data,
   selectedFilters,
   query,
+  isNew,
   onFilterSelect,
 }: SearchContentProps) => {
   const router = useRouter()
@@ -74,6 +76,7 @@ const SearchContent = ({
             meta={data?.meta}
             onLoadMore={onLoadMore}
             lowerCaseFilters={lowerCaseFilters}
+            isNew={isNew}
             isFiltering={selectedFilters.length > 0}
           />
         </div>
@@ -90,9 +93,13 @@ const SearchScreen = ({
   const [selectedFilters, setSelectedFilters] = useState<string[]>(
     initialFilters ? initialFilters.split(',') : []
   )
+  const [prevQuery, setPrevQuery] = useState('')
+
   const router = useRouter()
   const searchParams = useSearchParams()
   const parameters = useParams()
+
+  const curQuery = searchParams.get('query') || ''
 
   const handleFilterSelect = (filter: string) => {
     const newFilters = selectedFilters.includes(filter)
@@ -112,6 +119,10 @@ const SearchScreen = ({
     setSelectedFilters(newFilters)
   }
 
+  useEffect(() => {
+    setPrevQuery(curQuery)
+  }, [curQuery])
+
   return (
     <Suspense fallback={<div>Loading search content...</div>}>
       <SearchContent
@@ -119,6 +130,7 @@ const SearchScreen = ({
         selectedFilters={selectedFilters}
         query={initialQuery}
         onFilterSelect={handleFilterSelect}
+        isNew={prevQuery !== curQuery}
       />
     </Suspense>
   )
