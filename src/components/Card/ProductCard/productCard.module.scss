@@ -1,0 +1,161 @@
+@import '../../../styles/extend.module.scss';
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  height: 496px;
+  min-height: 496px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .topBox {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background:
+      lightgray 66.593px 20.64px / 55.605% 83.407% no-repeat,
+      #fff;
+    overflow: hidden;
+
+    .commission1 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      width: 101.486px;
+      height: 16.262px;
+      padding: 2px 7px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid #fff;
+      background: #000;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: Montserrat;
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+
+    .commission2 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: inline-flex;
+      padding: 2px 7px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #000;
+      background: #fff;
+      overflow: hidden;
+      color: #000;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: Montserrat;
+      font-size: 9px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    .like {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .badge {
+      position: absolute;
+      right: 10px;
+      bottom: 12px;
+    }
+  }
+
+  .middleBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+
+    .brand {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      color: #000;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: Montserrat;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 16px;
+    }
+
+    .title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      align-self: stretch;
+      overflow: hidden;
+      color: #000;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .options,
+    .price {
+      color: #000;
+      font-family: Montserrat;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    .price {
+      font-weight: 700;
+    }
+  }
+
+  .bottomBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      @extend %button;
+    }
+
+    button:last-of-type {
+      background: #000;
+      color: #fff;
+
+      &:hover {
+        background: #575757;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../styles/extend.module.scss';
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  .topBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    h5 {
+      color: #000;
+      font-family: Montserrat;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 76px;
+      letter-spacing: -0.22px;
+    }
+
+    p {
+      color: #000;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 76px;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 21px;
+    column-gap: 30px;
+  }
+
+  button {
+    @extend %button;
+    align-self: auto;
+  }
+}

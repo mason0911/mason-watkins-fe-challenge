@@ -1,0 +1,85 @@
+.mainHeader {
+  width: 100%;
+  background-color: black;
+
+  .innerContainer {
+    width: 100%;
+    max-width: 1440px;
+    background-color: black;
+
+    .containerTop {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 40px;
+
+      .btn {
+        all: unset;
+        cursor: pointer;
+      }
+
+      .actionContainer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+
+  .midContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .bottomContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 10px;
+
+    .dropdown {
+      all: unset;
+      display: flex;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 24px;
+      border: 1px solid #575757;
+      background: #575757;
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: #d7caca;
+      }
+    }
+
+    .navLink {
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+
+      &:hover {
+        color: #575757;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  .innerContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 24px 50px;
+
+    .link {
+      color: #000;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: capitalize;
+    }
+    .fadeLink {
+      color: #999;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: capitalize;
+    }
+  }
+}

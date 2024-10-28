@@ -8,13 +8,21 @@
     "build": "next build",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --fix",
+    "prettier": "prettier --write \"src/\""
   },
   "dependencies": {
+    "axios": "^1.7.7",
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
     "next": "14.2.3",
-    "react": "^18"
+    "react": "^18",
+    "sass": "^1.80.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.12",
+    "@types/node": "22.8.1",
     "@types/react": "18.3.3",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "eslint-config-next": "14.2.3",

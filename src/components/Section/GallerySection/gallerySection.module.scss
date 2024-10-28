@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  .innerContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .topBox {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 40px 40px 40px;
+      p {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 46px;
+        letter-spacing: 4.5px;
+        text-transform: uppercase;
+      }
+      h1 {
+        color: #000;
+        font-family: Oswald;
+        font-size: 76px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 76px;
+        letter-spacing: -4.56px;
+        text-transform: uppercase;
+      }
+    }
+    .midBox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      a {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .bottomBox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 0 70px 0;
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        .box {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 18px;
+          img {
+            width: 100%;
+          }
+          h2 {
+            width: 100vw;
+            max-width: 568px;
+            color: #000;
+            text-align: center;
+            font-family: 'PP Acma';
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 38px;
+            text-transform: uppercase;
+          }
+          button {
+            display: flex;
+            height: 34px;
+            padding: 4px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+            background: #fff;
+            cursor: pointer;
+            margin-bottom: 20px;
+
+            &:hover {
+              background: #000;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

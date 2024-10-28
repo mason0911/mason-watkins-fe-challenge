@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  display: flex;
+  padding: 70px 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  gap: 40px;
+  align-self: stretch;
+
+  .heading {
+    color: #000;
+    font-family: Oswald;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 76px; /* 100% */
+    letter-spacing: -3.8px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

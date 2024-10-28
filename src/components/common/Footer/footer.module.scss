@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  background-color: #000;
+
+  .innerContainer {
+    width: 100%;
+    max-width: 1263px;
+
+    .box1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      .socialIcons {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    .box2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 56px;
+      margin: 48px 0 58px 0;
+      .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4px;
+        h4 {
+          color: #fff;
+          font-feature-settings:
+            'liga' off,
+            'clig' off;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        .link {
+          color: #bbb;
+          font-feature-settings:
+            'liga' off,
+            'clig' off;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .box3 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      p {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+      }
+      .box4 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+        .footerLink {
+          color: #bbb;
+          font-family: Montserrat;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 12px;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+%carouselContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  .topBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    h5 {
+      color: #000;
+      font-family: Montserrat;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 76px;
+      letter-spacing: -0.22px;
+    }
+
+    p {
+      color: #000;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 76px;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carouselButton {
+    display: flex;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .carouselContainer {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+  }
+
+  .carouselItem {
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .prevButton {
+    margin-right: 10px;
+
+    &:hover {
+      background: #575757;
+    }
+  }
+
+  .nextButton {
+    margin-left: 10px;
+
+    &:hover {
+      background: #575757;
+    }
+  }
+}
+
+%button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.26px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  color: #000;
+
+  &:hover {
+    background: #dfdfdf;
+  }
+}

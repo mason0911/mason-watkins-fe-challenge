@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  width: 262px;
+  height: 248px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  .badge {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+
+  h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -1.08px;
+    text-transform: capitalize;
+  }
+}
