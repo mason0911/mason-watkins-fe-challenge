@@ -138,6 +138,7 @@ This project uses Next.js 14's App Router for navigation. Here’s how you can n
 The application can be run locally using the development server with Turbopack for enhanced performance:
 
 ```bash
+npm i
 npm run dev
 ```
 
